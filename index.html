@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envee Beauty</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">ENVEE BEAUTY</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="content-with-image">
+    <div class="text-content">
+      <h1>Welcome to Envee Beauty</h1>
+      <p>We strive for meaningful work, valuable results, and exceptional service for our customers.</p>
+    </div>
+    <div class="image-container">
+      <img src="pics/Snapinsta.app_444213723_18414077872066644_1847281204085116448_n_1080.jpg" alt="Home Image">
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about-us" class="content-with-image reverse">
+    <div class="text-content">
+      <h2>About Us</h2>
+      <p>
+        ENVEE was created in 2015, inspired by the beauty industry. With over five years of expertise, we offer diverse
+        services including makeup, hair, nails, and training.
+      </p>
+      <h3>What We Do</h3>
+      <ul>
+        <li>Makeup Services</li>
+        <li>Hair Services</li>
+        <li>Nail Services</li>
+        <li>Photo Shoot Planning</li>
+      </ul>
+    </div>
+    <div class="image-container">
+      <img src="pics/Snapinsta.app_446836977_948647023667244_1221766292756157821_n_1080.jpg" alt="About Us Image">
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="content-with-image">
+    <div class="text-content">
+      <h2>Book an Appointment</h2>
+      <form id="booking-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+  
+        <label for="contact">Contact Information:</label>
+        <input type="text" id="contact" name="contact" required>
+  
+        <label for="service">Select Service:</label>
+        <select id="service" name="service" required>
+          <option value="hair">Hair</option>
+          <option value="nails">Nails</option>
+          <option value="makeup">Makeup</option>
+          <option value="all">All Services</option>
+        </select>
+  
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+  
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+  
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+  
+        <button type="button" id="submit-btn">Book Now</button>
+      </form>
+    </div>
+    <div class="image-container">
+      <img src="pics/Snapinsta.app_447086897_1463420464533820_8592383974181996113_n_1080.jpg" alt="Booking Image">
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact-us" class="content-with-image reverse">
+    <div class="text-content">
+      <h2>Contact Us</h2>
+      <p>Phone: +264818301098</p>
+      <p>Email: kvatuva@gmail.com</p>
+      <p>Follow us on Instagram: <a href="https://instagram.com/envee_beauty" target="_blank">@envee_beauty</a></p>
+    </div>
+    <div class="image-container">
+      <img src="pics/Snapinsta.app_453403957_18425573680066644_2331331113591366727_n_1080.jpg" alt="Contact Us Image">
+    </div>
+  </section>
+  <script src="script.js" defer></script>
+
+  <footer>
+    <p>© 2024 Envee Beauty. All rights reserved.</p>
+  </footer>
+</body>
+</html>
