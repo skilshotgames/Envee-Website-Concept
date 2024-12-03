@@ -32,7 +32,7 @@ document.getElementById("submit-btn").addEventListener("click", function () {
     emailSubject
   )}&body=${emailBody}`;
 
-  const phoneNumber = "264818301098"; // Replace with your WhatsApp number
+  const phoneNumber = "264818301098";
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   const whatsappLink = isMobile
     ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`
