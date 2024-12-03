@@ -1,5 +1,4 @@
 document.getElementById("submit-btn").addEventListener("click", function () {
-  // Collect form data
   const name = document.getElementById("name").value;
   const contact = document.getElementById("contact").value;
   const service = document.getElementById("service").value;
@@ -7,13 +6,11 @@ document.getElementById("submit-btn").addEventListener("click", function () {
   const time = document.getElementById("time").value;
   const comments = document.getElementById("comments").value;
 
-  // Validate form data
   if (!name || !contact || !service || !date || !time) {
     alert("Please fill in all required fields!");
     return;
   }
 
-  // Generate WhatsApp message
   const whatsappMessage = `Hello, I would like to book an appointment: 
 - Name: ${name}
 - Contact: ${contact}
@@ -22,11 +19,6 @@ document.getElementById("submit-btn").addEventListener("click", function () {
 - Preferred Time: ${time}
 - Additional Comments: ${comments}`;
 
-  const whatsappLink = `https://wa.me/+264818301098?text=${encodeURIComponent(
-    whatsappMessage
-  )}`;
-
-  // Generate email link
   const emailSubject = "Appointment Booking Request";
   const emailBody = `Hello, I would like to book an appointment:%0D%0A
 - Name: ${name}%0D%0A
@@ -40,17 +32,27 @@ document.getElementById("submit-btn").addEventListener("click", function () {
     emailSubject
   )}&body=${emailBody}`;
 
-  // Prompt user to choose WhatsApp or Email
-  const choice = confirm(
-    "Do you want to send this booking via WhatsApp? (Cancel for Email)"
+  const phoneNumber = "264818301098"; // Replace with your WhatsApp number
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  const whatsappLink = isMobile
+    ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`
+    : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+        whatsappMessage
+      )}`;
+
+  // Ask user for preferred method
+  const choice = prompt(
+    "How would you like to send your booking? Type 'WhatsApp' or 'Email'."
   );
 
-  // Open the appropriate link
-  if (choice) {
+  if (choice && choice.toLowerCase() === "whatsapp") {
     window.open(whatsappLink, "_blank");
-  } else {
+  } else if (choice && choice.toLowerCase() === "email") {
     window.open(emailLink, "_blank");
+  } else {
+    alert("Please type 'WhatsApp' or 'Email' to proceed.");
   }
 });
+
 
   
